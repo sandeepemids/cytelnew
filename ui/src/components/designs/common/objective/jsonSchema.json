@@ -1,0 +1,22 @@
+{
+    "type":"object",
+    "properties": {
+        "hypothesis": {
+            "type": "integer",
+            "title": "Hypothesis",
+            "enum": [
+              1,
+              2
+            ],
+            "enumNames": [
+              "Superiority",
+              "Non-Inferiority"
+            ]
+          },
+          "numberOfEvents": {
+            "type": "string",
+            "title": "Number of Events",
+            "default": "88"
+          }
+    }
+}

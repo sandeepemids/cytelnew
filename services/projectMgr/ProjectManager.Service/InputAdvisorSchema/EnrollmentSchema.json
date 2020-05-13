@@ -1,0 +1,431 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "http://example.com/example.json",
+  "type": "array",
+  "title": "The Root Schema",
+  "description": "The root schema comprises the entire JSON document.",
+  "default": [],
+  "additionalItems": true,
+  "items": {
+    "$id": "#/items",
+    "type": "object",
+    "title": "The Items Schema",
+    "description": "An explanation about the purpose of this instance.",
+    "default": {},
+    "examples": [
+      {
+        "inputMethod": {
+          "value": "Accrual Rate",
+          "id": 1.0
+        },
+        "error": [
+          {
+            "field": "Name",
+            "message": "Error Message"
+          }
+        ],
+        "cardOrder": 1.0,
+        "distribution": {
+          "value": "Uniform",
+          "id": 1.0
+        },
+        "enrollmentId": 1.0,
+        "name": "Enrollment Name 1",
+        "sites": [
+          {
+            "avgPatientsEnrolled": 20.0,
+            "order": 1.0,
+            "error": [
+              {
+                "field": "Name",
+                "message": "Error Message"
+              }
+            ],
+            "siteInititationTime": 0.0,
+            "enrollmentCap": 33.33,
+            "geography": {
+              "id": 1.0,
+              "value": "USA"
+            }
+          }
+        ]
+      }
+    ],
+    "additionalProperties": true,
+    "required": [
+      "enrollmentId",
+      "name",
+      "inputMethod",
+      "distribution",
+      "sites",
+      "cardOrder"
+    ],
+    "properties": {
+      "enrollmentId": {
+        "$id": "#/items/properties/enrollmentId",
+        "type": "integer",
+        "title": "The Enrollmentid Schema",
+        "description": "An explanation about the purpose of this instance.",
+        "default": 0,
+        "examples": [
+          1.0
+        ]
+      },
+      "name": {
+        "$id": "#/items/properties/name",
+        "type": "string",
+        "title": "The Name Schema",
+        "description": "An explanation about the purpose of this instance.",
+        "default": "",
+        "examples": [
+          "Enrollment Name 1"
+        ]
+      },
+      "inputMethod": {
+        "$id": "#/items/properties/inputMethod",
+        "type": "object",
+        "title": "The Inputmethod Schema",
+        "description": "An explanation about the purpose of this instance.",
+        "default": {},
+        "examples": [
+          {
+            "value": "Accrual Rate",
+            "id": 1.0
+          }
+        ],
+        "additionalProperties": true,
+        "required": [
+          "id",
+          "value"
+        ],
+        "properties": {
+          "id": {
+            "$id": "#/items/properties/inputMethod/properties/id",
+            "type": "integer",
+            "title": "The Id Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 0,
+            "examples": [
+              1.0
+            ]
+          },
+          "value": {
+            "$id": "#/items/properties/inputMethod/properties/value",
+            "type": "string",
+            "title": "The Value Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+              "Accrual Rate"
+            ]
+          }
+        }
+      },
+      "distribution": {
+        "$id": "#/items/properties/distribution",
+        "type": "object",
+        "title": "The Distribution Schema",
+        "description": "An explanation about the purpose of this instance.",
+        "default": {},
+        "examples": [
+          {
+            "value": "Uniform",
+            "id": 1.0
+          }
+        ],
+        "additionalProperties": true,
+        "required": [
+          "id",
+          "value"
+        ],
+        "properties": {
+          "id": {
+            "$id": "#/items/properties/distribution/properties/id",
+            "type": "integer",
+            "title": "The Id Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 0,
+            "examples": [
+              1.0
+            ]
+          },
+          "value": {
+            "$id": "#/items/properties/distribution/properties/value",
+            "type": "string",
+            "title": "The Value Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+              "Uniform"
+            ]
+          }
+        }
+      },
+      "sites": {
+        "$id": "#/items/properties/sites",
+        "type": "array",
+        "title": "The Sites Schema",
+        "description": "An explanation about the purpose of this instance.",
+        "default": [],
+        "examples": [
+          [
+            {
+              "avgPatientsEnrolled": 20.0,
+              "order": 1.0,
+              "error": [
+                {
+                  "field": "Name",
+                  "message": "Error Message"
+                }
+              ],
+              "enrollmentCap": 33.33,
+              "siteInititationTime": 0.0,
+              "geography": {
+                "id": 1.0,
+                "value": "USA"
+              }
+            }
+          ]
+        ],
+        "additionalItems": true,
+        "items": {
+          "$id": "#/items/properties/sites/items",
+          "type": "object",
+          "title": "The Items Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": {},
+          "examples": [
+            {
+              "error": [
+                {
+                  "field": "Name",
+                  "message": "Error Message"
+                }
+              ],
+              "siteInititationTime": 0.0,
+              "enrollmentCap": 33.33,
+              "geography": {
+                "value": "USA",
+                "id": 1.0
+              },
+              "avgPatientsEnrolled": 20.0,
+              "order": 1.0
+            }
+          ],
+          "additionalProperties": true,
+          "required": [
+            "geography",
+            "siteInititationTime",
+            "avgPatientsEnrolled",
+            "enrollmentCap",
+            "order"
+          ],
+          "properties": {
+            "geography": {
+              "$id": "#/items/properties/sites/items/properties/geography",
+              "type": "object",
+              "title": "The Geography Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": {},
+              "examples": [
+                {
+                  "id": 1.0,
+                  "value": "USA"
+                }
+              ],
+              "additionalProperties": true,
+              "required": [
+                "id",
+                "value"
+              ],
+              "properties": {
+                "id": {
+                  "$id": "#/items/properties/sites/items/properties/geography/properties/id",
+                  "type": "integer",
+                  "title": "The Id Schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": 0,
+                  "examples": [
+                    1.0
+                  ]
+                },
+                "value": {
+                  "$id": "#/items/properties/sites/items/properties/geography/properties/value",
+                  "type": "string",
+                  "title": "The Value Schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": [
+                    "USA"
+                  ]
+                }
+              }
+            },
+            "siteInititationTime": {
+              "$id": "#/items/properties/sites/items/properties/siteInititationTime",
+              "type": "integer",
+              "title": "The Siteinititationtime Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": 0,
+              "examples": [
+                0.0
+              ]
+            },
+            "avgPatientsEnrolled": {
+              "$id": "#/items/properties/sites/items/properties/avgPatientsEnrolled",
+              "type": "integer",
+              "title": "The Avgpatientsenrolled Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": 0,
+              "examples": [
+                20.0
+              ]
+            },
+            "enrollmentCap": {
+              "$id": "#/items/properties/sites/items/properties/enrollmentCap",
+              "type": "number",
+              "title": "The Enrollmentcap Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": 0,
+              "examples": [
+                33.33
+              ]
+            },
+            "order": {
+              "$id": "#/items/properties/sites/items/properties/order",
+              "type": "integer",
+              "title": "The Order Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": 0,
+              "examples": [
+                1.0
+              ]
+            },
+            "error": {
+              "$id": "#/items/properties/sites/items/properties/error",
+              "type": "array",
+              "title": "The Error Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": [],
+              "examples": [
+                [
+                  {
+                    "field": "Name",
+                    "message": "Error Message"
+                  }
+                ]
+              ],
+              "additionalItems": true,
+              "items": {
+                "$id": "#/items/properties/sites/items/properties/error/items",
+                "type": "object",
+                "title": "The Items Schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": {},
+                "examples": [
+                  {
+                    "message": "Error Message",
+                    "field": "Name"
+                  }
+                ],
+                "additionalProperties": true,
+                "required": [
+                  "field",
+                  "message"
+                ],
+                "properties": {
+                  "field": {
+                    "$id": "#/items/properties/sites/items/properties/error/items/properties/field",
+                    "type": "string",
+                    "title": "The Field Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                      "Name"
+                    ]
+                  },
+                  "message": {
+                    "$id": "#/items/properties/sites/items/properties/error/items/properties/message",
+                    "type": "string",
+                    "title": "The Message Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                      "Error Message"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "cardOrder": {
+        "$id": "#/items/properties/cardOrder",
+        "type": "integer",
+        "title": "The Cardorder Schema",
+        "description": "An explanation about the purpose of this instance.",
+        "default": 0,
+        "examples": [
+          1.0
+        ]
+      },
+      "error": {
+        "$id": "#/items/properties/error",
+        "type": "array",
+        "title": "The Error Schema",
+        "description": "An explanation about the purpose of this instance.",
+        "default": [],
+        "examples": [
+          [
+            {
+              "field": "Name",
+              "message": "Error Message"
+            }
+          ]
+        ],
+        "additionalItems": true,
+        "items": {
+          "$id": "#/items/properties/error/items",
+          "type": "object",
+          "title": "The Items Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": {},
+          "examples": [
+            {
+              "field": "Name",
+              "message": "Error Message"
+            }
+          ],
+          "additionalProperties": true,
+          "required": [
+            "field",
+            "message"
+          ],
+          "properties": {
+            "field": {
+              "$id": "#/items/properties/error/items/properties/field",
+              "type": "string",
+              "title": "The Field Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "Name"
+              ]
+            },
+            "message": {
+              "$id": "#/items/properties/error/items/properties/message",
+              "type": "string",
+              "title": "The Message Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "Error Message"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

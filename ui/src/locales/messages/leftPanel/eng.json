@@ -1,0 +1,10 @@
+{
+	"leftPanel.objective": "Objective",
+	"leftPanel.populationScenarios": "Population Scenarios",
+	"leftPanel.enrollmentScenarios": "Enrollment Scenarios",
+	"leftPanel.designs": "Designs",
+	"leftPanel.operationalCosts": "Operational Costs",
+	"leftPanel.marketAccess": "Market Access",
+	"leftPanel.setup": "Setup",
+	"leftPanel.simulationModels": "Simulation Models"
+}

@@ -1,0 +1,137 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Simulation.Api</name>
+    </assembly>
+    <members>
+        <member name="T:Simulation.Api.Constants.ExceptionMessageCodes">
+            <summary>
+            Message Codes for various types of Exceptions
+            </summary>
+        </member>
+        <member name="F:Simulation.Api.Constants.ExceptionMessageCodes.INTERNAL_SERVER_ERROR">
+            <summary>
+            Message Code for Internal Server Error.
+            </summary>
+        </member>
+        <member name="T:Simulation.Api.Controllers.SimulationController">
+            <summary>
+            Controller Class definition for defining various operations on Solaris Designs
+            1. Simulate Design
+            2. Get the Model Count
+            </summary>
+        </member>
+        <member name="M:Simulation.Api.Controllers.SimulationController.#ctor(Simulation.Service.Interfaces.ISimulationService)">
+            <summary>
+            SimulationController Constructor Definition
+            </summary>
+            <param name="simulationService"></param>
+        </member>
+        <member name="M:Simulation.Api.Controllers.SimulationController.Simulate(Simulation.Models.SimulationRequestModel)">
+            <summary>
+            POST endpoint for Simulating the Solaris Design
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Simulation.Api.Controllers.SimulationController.GetModelCount">
+            <summary>
+            Get endpoint for getting the Models count
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Simulation.Api.Extensions.ExceptionMiddleware">
+            <summary>
+            Middleware definition for Global Exception Handler
+            </summary>
+        </member>
+        <member name="M:Simulation.Api.Extensions.ExceptionMiddleware.ConfigureExceptionHandler(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+            <summary>
+            Configures Exception Handler
+            </summary>
+            <param name="app">Application Builder Object</param>
+        </member>
+        <member name="T:Simulation.Api.Extensions.ServiceExtensions">
+            <summary>
+            Extension class defined for Service Class
+            </summary>
+        </member>
+        <member name="M:Simulation.Api.Extensions.ServiceExtensions.ConfigureCors(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Configures CORS Policy
+            </summary>
+            <param name="services">Services Object</param>
+        </member>
+        <member name="M:Simulation.Api.Extensions.ServiceExtensions.ConfigureApiVersioning(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Configures API Versioning
+            </summary>
+            <param name="services">Services Object</param>
+        </member>
+        <member name="T:Simulation.Api.Extensions.SwaggerExtension">
+            <summary>
+            Extension class defined for Swagger Class
+            </summary>
+        </member>
+        <member name="M:Simulation.Api.Extensions.SwaggerExtension.AddSwagger(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Adds Swagger support Simulation API service
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="M:Simulation.Api.Extensions.SwaggerExtension.UseCustomSwagger(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+            <summary>
+            Uses Custom Swagger
+            </summary>
+            <param name="app"></param>
+        </member>
+        <member name="T:Simulation.Api.Program">
+            <summary>
+            Program Class Definition
+            </summary>
+        </member>
+        <member name="M:Simulation.Api.Program.Main(System.String[])">
+            <summary>
+            Main Function
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="M:Simulation.Api.Program.CreateHostBuilder(System.String[])">
+            <summary>
+            Creates Host Builder
+            </summary>
+            <param name="args"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Simulation.Api.Startup">
+            <summary>
+            Startup Class Definition
+            </summary>
+        </member>
+        <member name="M:Simulation.Api.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Constructor for Startup Class
+            </summary>
+            <param name="configuration">Configuration Object</param>
+        </member>
+        <member name="P:Simulation.Api.Startup.Configuration">
+            <summary>
+            Configuration Parameter Settings
+            </summary>
+        </member>
+        <member name="M:Simulation.Api.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Configurs various services
+            This method gets called by the runtime. Use this method to add services to the container. 
+            </summary>
+            <param name="services">Services Object</param>
+        </member>
+        <member name="M:Simulation.Api.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)">
+            <summary>
+            Configures App and Environment
+            This method gets called by the runtime. Use this method to configure the HTTP request pipeline. 
+            </summary>
+            <param name="app">An Application Builder</param>
+            <param name="env">Environment Variable</param>
+        </member>
+    </members>
+</doc>

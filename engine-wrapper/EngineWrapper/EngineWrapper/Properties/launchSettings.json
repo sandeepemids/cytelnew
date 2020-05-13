@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "EngineWrapper": {
+      "commandName": "Project"
+    },
+    "Docker": {
+      "commandName": "Docker"
+    }
+  }
+}

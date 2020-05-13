@@ -1,0 +1,119 @@
+{
+    "msgVersion": 1.0,
+    "msgType": "simulationResults",
+    "msgId": 123456789,
+    "target": {
+		"location": "//regstry.docker.com/cytel/",
+		"name": "2-arm-TimeToEvent-GroupSequential",
+		"id": 123,
+		"version": 1.0
+	},
+    "computeInfo":[ 
+		{ "stage": "SimulationService", "receviedTime": "20200402-12:23:31.342", "sentTime": "20200402-12:23:33.348" },
+		{ "stage": "InputQueue", "receviedTime": "20200402-12:23:31.342", "sentTime": "20200402-12:23:33.348" },
+		{ "stage": "MonolithEngine", "receviedTime": "20200402-12:23:33.349", "sentTime": "20200402-12:23:53.350", "RAM": 123464353, "cpuTime": 24231, "elapsedTime": 234325.234 },                    
+		{ "stage": "OutputQueue", "receviedTime": "20200402-12:23:53.352", "sentTime": "20200402-12:23:53.369" },
+		{ "stage": "StorageService", "receviedTime": "20200402-12:23:31.342", "sentTime": "20200402-12:23:33.348" }		
+    ],
+	"project":{
+		"scenarioId": "bd57e927227311eaa3270b9e81dab55e",
+		"projectName" : "Project Name",
+		"timeUnit" : "Month",
+		"controlArm": "Salvage Chemo",
+		"treatmentArm": "Quizartinib",
+		"numberOfSim" : 10000,
+		"simSeed" : 1234567
+	},
+	"population": {
+		"populationId": "bd57e92722731we1ea3270b9e81dab55e",
+		"name":"Population Name",
+		"virtualPopulationSize": 10000,			
+		"endpointModel":[
+			{
+				"name":"Overall Survival", 
+				"endpoint": "Overall Survival", 
+				"type":"Time to Event",
+				"modelName": "Exponential",
+				"inputMethod": "Median Survival Time",
+				"inputData": [
+					{
+						"control": 0.035,
+						"treatment": 0.017,
+						"hazardRatio": 0.486
+					}
+				]
+			},
+			{
+				"name":"Progress Free Survival", 
+				"endpoint": "Progress Free Survival", 
+				"type":"Time to Event",
+				"modelName": "Exponential",
+				"inputMethod": "Median Survival Time",
+				"inputData": [
+					{
+						"control": 0.035,
+						"treatment": 0.017,
+						"hazardRatio": 0.486
+					}
+				]
+			}
+		],
+		"dropoutRateModel": {
+			"modelName": "Exponential",
+			"inputMethod": "Probability of Dropout",
+			"inputData": [
+				{
+					"byTime" : 10,
+					"control": 0.035,
+					"treatment": 0.017
+				}
+			]
+		}
+	},
+	"enrollment": {
+		"enrollmentId": "fg57e92722731we1ea4570b9e81dab55e",
+		"name":"Enrollment Name 1",
+		"inputMethod" : "Accrual Rate",
+		"distribution ": "Uniform",
+		"sites" :[
+			{
+				"geography": "USA",		
+				"siteInititationTime": 0, 		
+				"avgPatientsEnrolled": 20,
+				"enrollmentCap": 33.33
+			}
+		]		
+	},
+	"design": {			
+		"name": "Name of Design",
+		"primaryEndpoint": "Overall Survival",
+		"numberOfArms":2,
+		"regulatoryRiskAssessment":"Low",
+		"statisticalDesign":"Fixed Sample",
+		"hypothesis":"Superiority",
+		"numberOfEvents": 120,
+		"sampleSize": 400,
+		"allocationRatio": 3.5,
+		"subjectsAreFollowedType": "Fixed Period",
+		"subjectsAreFollowedPeriod": 3,
+		"type1Error": 0.5,
+		"testStatistics":"Logrank",
+		"testType": "1-Sided",
+		"tailType":"Left Tail",	
+		"criticalPoint" : -1.96
+	},
+	"summaryResult" :{
+		"power": 0.54159999999999997,
+		"sampleSize": 149,
+		"events": 72,
+		"dropouts": 10,
+		"studyduration": 56.661332435305681,
+		"accrualduration": 18.50336486192376,
+		"outputBoundaries": {
+			"effBoundary": [-1.6448536275937762]
+			},
+		"medFollowUpTime": 30,
+		"insuffInfoCount": 1,
+		"seed": 100
+	}
+}

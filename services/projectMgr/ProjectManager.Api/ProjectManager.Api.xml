@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ProjectManager.Api</name>
+    </assembly>
+    <members>
+        <member name="T:ProjectManager.Api.Controllers.IndicationController">
+            <summary>
+            Controller created for performing GET action on Indication resource
+            </summary>
+        </member>
+        <member name="M:ProjectManager.Api.Controllers.IndicationController.GetIndications">
+            <summary>
+            Get End point created for listing indications
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:ProjectManager.Api.Controllers.ProgramController">
+            <summary>
+            Controller created for performaing GET/POST actions on Program resource
+            </summary>
+        </member>
+        <member name="M:ProjectManager.Api.Controllers.ProgramController.GetPrograms">
+            <summary>
+            Get endpoint created for listing programs
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:ProjectManager.Api.Controllers.ProjectController">
+            <summary>
+            Project Controller for performing get, post actions on Project resource 
+            </summary>
+        </member>
+        <member name="M:ProjectManager.Api.Controllers.ProjectController.GetProjects">
+            <summary>
+            Get endpoint for listing the projects
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ProjectManager.Api.Controllers.ProjectController.CreateProject(ProjectManager.Models.Project)">
+            <summary>
+            POST endpoint for creating projects
+            </summary>
+            <param name="project"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ProjectManager.Api.Controllers.TimeUnitController">
+            <summary>
+            TimeUnit Controller for Getting TimeUnit Details
+            </summary>
+        </member>
+        <member name="T:ProjectManager.Api.Extensions.SwaggerExtension">
+            <summary>
+            Extension Method for Swagger implementation
+            </summary>
+        </member>
+        <member name="T:ProjectManagement.Api.Controllers.CurrencyController">
+            <summary>
+            Controller created for performing GET action on Currency resource
+            </summary>
+        </member>
+        <member name="M:ProjectManagement.Api.Controllers.CurrencyController.GetCurrency">
+            <summary>
+            GET endpoint created for getting the list of currencies.
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

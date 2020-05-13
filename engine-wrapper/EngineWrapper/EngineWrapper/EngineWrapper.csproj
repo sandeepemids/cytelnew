@@ -1,0 +1,58 @@
+﻿<Project Sdk="Microsoft.NET.Sdk;Microsoft.NET.Sdk.Publish">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="libAdditionalSimComp.so" />
+    <None Remove="libAnalyticDesigns.so" />
+    <None Remove="libInfoBasedDesign.so" />
+    <None Remove="libInfobasedIM.so" />
+    <None Remove="libMCPAnalysis.so" />
+    <None Remove="libMiscellaneous.so" />
+    <None Remove="libSimulations.so" />
+    <None Remove="libtopsimengwrapper.so" />
+    <None Remove="libVirtualPopulation.so" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="libAdditionalSimComp.so">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="libAnalyticDesigns.so">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="libInfoBasedDesign.so">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="libInfobasedIM.so">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="libMCPAnalysis.so">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="libMiscellaneous.so">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="libSimulations.so">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="libtopsimengwrapper.so">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="libVirtualPopulation.so">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Azure.Storage.Queue" Version="11.1.3" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.10.8" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="4.7.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EngineWrapper.DataLake\EngineWrapper.DataLake.csproj" />
+    <ProjectReference Include="..\EngineWrapper.Interface\EngineWrapper.Interface.csproj" />
+    <ProjectReference Include="..\EngineWrapper.MessageQueue\EngineWrapper.MessageQueue.csproj" />
+    <ProjectReference Include="..\EngineWrapper.Utils\EngineWrapper.Utils.csproj" />
+  </ItemGroup>
+</Project>

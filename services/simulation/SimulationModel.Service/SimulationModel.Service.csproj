@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Azure.Storage.Queue" Version="11.1.3" />
+    <PackageReference Include="Microsoft.Extensions.Options" Version="3.1.3" />
+    <PackageReference Include="Newtonsoft.Json.Schema" Version="3.0.13" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Simulation.Constants\Simulation.Constants.csproj" />
+    <ProjectReference Include="..\Simulation.DataAccess\Simulation.DataAccess.csproj" />
+    <ProjectReference Include="..\Simulation.Models\Simulation.Models.csproj" />
+  </ItemGroup>
+
+</Project>

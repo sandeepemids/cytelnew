@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Options" Version="3.1.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Simulation.DataAccess\Simulation.DataAccess.csproj" />
+    <ProjectReference Include="..\Simulation.Models\Simulation.Models.csproj" />
+    <ProjectReference Include="..\SimulationModel.Service\SimulationModel.Service.csproj" />
+  </ItemGroup>
+
+</Project>

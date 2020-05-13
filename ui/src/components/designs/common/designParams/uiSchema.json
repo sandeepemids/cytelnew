@@ -1,0 +1,13 @@
+{
+    "name": {
+        "ui:placeholder": "Name",
+        "ui:autocomplete": "off"
+    },
+    "primaryEndpoint": {
+        "ui:placeholder": "Primary Endpoint"
+    },
+    "arms": {
+        "ui:placeholder": "Arms",
+        "ui:readonly": true
+    }
+}

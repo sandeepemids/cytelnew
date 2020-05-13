@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>QueryService.Api</name>
+    </assembly>
+    <members>
+        <member name="F:QueryService.Api.Constants.ExceptionMessageCodes.INTERNAL_SERVER_ERROR">
+            <summary>
+            Message Code for Internal Server Error.
+            </summary>
+        </member>
+        <member name="T:QueryService.Api.Controllers.QueryServiceController">
+            <summary>
+            Controller Class definition for defining various operations on Solaris Designs
+            </summary>
+        </member>
+        <member name="M:QueryService.Api.Controllers.QueryServiceController.#ctor(QueryService.Service.Interfaces.IQueryFwService)">
+            <summary>
+            QueryServiceController Constructor Definition
+            </summary>
+            <param name="queryService"></param>
+        </member>
+        <member name="T:QueryService.Api.Extensions.ExceptionMiddleware">
+            <summary>
+            Middleware definition for Global Exception Handler
+            </summary>
+        </member>
+        <member name="M:QueryService.Api.Extensions.ExceptionMiddleware.ConfigureExceptionHandler(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+            <summary>
+            Configures Exception Handler
+            </summary>
+            <param name="app">Application Builder Object</param>
+        </member>
+        <member name="T:QueryService.Api.Extensions.ServiceExtensions">
+            <summary>
+            Extension class defined for Service Class
+            </summary>
+        </member>
+        <member name="M:QueryService.Api.Extensions.ServiceExtensions.ConfigureCors(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Configures CORS Policy
+            </summary>
+            <param name="services">Services Object</param>
+        </member>
+        <member name="M:QueryService.Api.Extensions.ServiceExtensions.ConfigureApiVersioning(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Configures API Versioning
+            </summary>
+            <param name="services">Services Object</param>
+        </member>
+        <member name="T:QueryService.Api.Extensions.SwaggerExtension">
+            <summary>
+            Extension class defined for Swagger Class
+            </summary>
+        </member>
+        <member name="M:QueryService.Api.Extensions.SwaggerExtension.AddSwagger(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Add Swagger support Query API service
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="M:QueryService.Api.Extensions.SwaggerExtension.UseCustomSwagger(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+            <summary>
+            Uses Custom Swagger
+            </summary>
+            <param name="app"></param>
+        </member>
+    </members>
+</doc>

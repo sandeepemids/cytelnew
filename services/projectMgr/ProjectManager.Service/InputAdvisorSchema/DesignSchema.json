@@ -1,0 +1,621 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "http://example.com/example.json",
+  "type": "array",
+  "title": "The Root Schema",
+  "description": "The root schema comprises the entire JSON document.",
+  "default": [],
+  "additionalItems": true,
+  "items": {
+    "$id": "#/items",
+    "type": "object",
+    "title": "The Items Schema",
+    "description": "An explanation about the purpose of this instance.",
+    "default": {},
+    "examples": [
+      {
+        "type1Error": "0.5",
+        "numberOfArms": 2.0,
+        "error": [
+          {
+            "field": "Name",
+            "message": "Error Message"
+          }
+        ],
+        "testType": {
+          "id": 1.0,
+          "value": "1-Sided"
+        },
+        "designKey": "gh63e92767231we1ea4570b9e81dab753",
+        "numberOfEvents": "120",
+        "tailType": {
+          "id": 1.0,
+          "value": "Left Tail"
+        },
+        "statisticalDesign": {
+          "version": "1.0.01",
+          "value": "Fixed Sample",
+          "id": 1.0
+        },
+        "designId": 1.0,
+        "allocationRatio": "3.5",
+        "subjectsAreFollowedPeriod": 3.0,
+        "subjectsAreFollowedType": {
+          "id": 2.0,
+          "value": "Fixed Period"
+        },
+        "regulatoryRiskAssessment": {
+          "id": 1.0,
+          "value": "Low"
+        },
+        "testStatistics": {
+          "id": 1.0,
+          "value": "Logrank"
+        },
+        "hypothesis": {
+          "value": "Superiority",
+          "id": 1.0
+        },
+        "criticalPoint": -1.96,
+        "name": "Name of Design 1",
+        "sampleSize": "400",
+        "endpointId": 1.0
+      },
+      {
+        "designKey": "fr45e92453231gh1ea4570b9e81dab56r",
+        "numberOfEvents": "120",
+        "tailType": {
+          "id": 1.0,
+          "value": "Left Tail"
+        },
+        "designId": 2.0,
+        "statisticalDesign": {
+          "value": "Group Sequential",
+          "id": 2.0,
+          "version": "1.0.01"
+        },
+        "efficacy": {
+          "boundaries": [
+            -1.96,
+            -1.96,
+            -1.96,
+            -1.96
+          ],
+          "boundaryScale": {
+            "value": "HR Scale",
+            "id": 1.0
+          },
+          "boundaryFamily": {
+            "id": 1.0,
+            "value": "Spending Functions"
+          },
+          "parameter": "2.1",
+          "spendingFunction": {
+            "value": "Gamma Family",
+            "id": 1.0
+          }
+        },
+        "allocationRatio": "3.5",
+        "subjectsAreFollowedPeriod": 3.0,
+        "regulatoryRiskAssessment": {
+          "value": "Low",
+          "id": 1.0
+        },
+        "subjectsAreFollowedType": {
+          "id": 2.0,
+          "value": "Fixed Period"
+        },
+        "testStatistics": {
+          "id": 1.0,
+          "value": "Logrank"
+        },
+        "hypothesis": {
+          "id": 1.0,
+          "value": "Superiority"
+        },
+        "interimAnalysesSpacing": [
+          30.0,
+          50.0,
+          70.99
+        ],
+        "name": "Name of Design 2",
+        "numberOfInterimAnalysis": 3.0,
+        "sampleSize": "400",
+        "endpointId": 1.0,
+        "numberOfArms": 2.0,
+        "type1Error": "0.5",
+        "testType": {
+          "value": "1-Sided",
+          "id": 1.0
+        },
+        "error": [
+          {
+            "field": "Name",
+            "message": "Error Message"
+          }
+        ]
+      }
+    ],
+    "additionalProperties": true,
+    "required": [
+      "designId",
+      "designKey",
+      "name",
+      "endpointId",
+      "numberOfArms",
+      "regulatoryRiskAssessment",
+      "statisticalDesign",
+      "hypothesis",
+      "numberOfEvents",
+      "sampleSize",
+      "allocationRatio",
+      "subjectsAreFollowedType",
+      "subjectsAreFollowedPeriod",
+      "type1Error",
+      "testStatistics",
+      "testType",
+      "tailType",
+      "criticalPoint"
+    ],
+    "properties": {
+      "designId": {
+        "$id": "#/items/properties/designId",
+        "type": "integer",
+        "title": "The Designid Schema",
+        "description": "An explanation about the purpose of this instance.",
+        "default": 0,
+        "examples": [
+          1.0
+        ]
+      },
+      "designKey": {
+        "$id": "#/items/properties/designKey",
+        "type": "string",
+        "title": "The Designkey Schema",
+        "description": "An explanation about the purpose of this instance.",
+        "default": "",
+        "examples": [
+          "gh63e92767231we1ea4570b9e81dab753"
+        ]
+      },
+      "name": {
+        "$id": "#/items/properties/name",
+        "type": "string",
+        "title": "The Name Schema",
+        "description": "An explanation about the purpose of this instance.",
+        "default": "",
+        "examples": [
+          "Name of Design 1"
+        ]
+      },
+      "endpointId": {
+        "$id": "#/items/properties/endpointId",
+        "type": "integer",
+        "title": "The Endpointid Schema",
+        "description": "An explanation about the purpose of this instance.",
+        "default": 0,
+        "examples": [
+          1.0
+        ]
+      },
+      "numberOfArms": {
+        "$id": "#/items/properties/numberOfArms",
+        "type": "integer",
+        "title": "The Numberofarms Schema",
+        "description": "An explanation about the purpose of this instance.",
+        "default": 0,
+        "examples": [
+          2.0
+        ]
+      },
+      "regulatoryRiskAssessment": {
+        "$id": "#/items/properties/regulatoryRiskAssessment",
+        "type": "object",
+        "title": "The Regulatoryriskassessment Schema",
+        "description": "An explanation about the purpose of this instance.",
+        "default": {},
+        "examples": [
+          {
+            "value": "Low",
+            "id": 1.0
+          }
+        ],
+        "additionalProperties": true,
+        "required": [
+          "id",
+          "value"
+        ],
+        "properties": {
+          "id": {
+            "$id": "#/items/properties/regulatoryRiskAssessment/properties/id",
+            "type": "integer",
+            "title": "The Id Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 0,
+            "examples": [
+              1.0
+            ]
+          },
+          "value": {
+            "$id": "#/items/properties/regulatoryRiskAssessment/properties/value",
+            "type": "string",
+            "title": "The Value Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+              "Low"
+            ]
+          }
+        }
+      },
+      "statisticalDesign": {
+        "$id": "#/items/properties/statisticalDesign",
+        "type": "object",
+        "title": "The Statisticaldesign Schema",
+        "description": "An explanation about the purpose of this instance.",
+        "default": {},
+        "examples": [
+          {
+            "id": 1.0,
+            "version": "1.0.01",
+            "value": "Fixed Sample"
+          }
+        ],
+        "additionalProperties": true,
+        "required": [
+          "id",
+          "value",
+          "version"
+        ],
+        "properties": {
+          "id": {
+            "$id": "#/items/properties/statisticalDesign/properties/id",
+            "type": "integer",
+            "title": "The Id Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 0,
+            "examples": [
+              1.0
+            ]
+          },
+          "value": {
+            "$id": "#/items/properties/statisticalDesign/properties/value",
+            "type": "string",
+            "title": "The Value Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+              "Fixed Sample"
+            ]
+          },
+          "version": {
+            "$id": "#/items/properties/statisticalDesign/properties/version",
+            "type": "string",
+            "title": "The Version Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+              "1.0.01"
+            ]
+          }
+        }
+      },
+      "hypothesis": {
+        "$id": "#/items/properties/hypothesis",
+        "type": "object",
+        "title": "The Hypothesis Schema",
+        "description": "An explanation about the purpose of this instance.",
+        "default": {},
+        "examples": [
+          {
+            "id": 1.0,
+            "value": "Superiority"
+          }
+        ],
+        "additionalProperties": true,
+        "required": [
+          "id",
+          "value"
+        ],
+        "properties": {
+          "id": {
+            "$id": "#/items/properties/hypothesis/properties/id",
+            "type": "integer",
+            "title": "The Id Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 0,
+            "examples": [
+              1.0
+            ]
+          },
+          "value": {
+            "$id": "#/items/properties/hypothesis/properties/value",
+            "type": "string",
+            "title": "The Value Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+              "Superiority"
+            ]
+          }
+        }
+      },
+      "numberOfEvents": {
+        "$id": "#/items/properties/numberOfEvents",
+        "type": "string",
+        "title": "The Numberofevents Schema",
+        "description": "An explanation about the purpose of this instance.",
+        "default": "",
+        "examples": [
+          "120"
+        ]
+      },
+      "sampleSize": {
+        "$id": "#/items/properties/sampleSize",
+        "type": "string",
+        "title": "The Samplesize Schema",
+        "description": "An explanation about the purpose of this instance.",
+        "default": "",
+        "examples": [
+          "400"
+        ]
+      },
+      "allocationRatio": {
+        "$id": "#/items/properties/allocationRatio",
+        "type": "string",
+        "title": "The Allocationratio Schema",
+        "description": "An explanation about the purpose of this instance.",
+        "default": "",
+        "examples": [
+          "3.5"
+        ]
+      },
+      "subjectsAreFollowedType": {
+        "$id": "#/items/properties/subjectsAreFollowedType",
+        "type": "object",
+        "title": "The Subjectsarefollowedtype Schema",
+        "description": "An explanation about the purpose of this instance.",
+        "default": {},
+        "examples": [
+          {
+            "value": "Fixed Period",
+            "id": 2.0
+          }
+        ],
+        "additionalProperties": true,
+        "required": [
+          "id",
+          "value"
+        ],
+        "properties": {
+          "id": {
+            "$id": "#/items/properties/subjectsAreFollowedType/properties/id",
+            "type": "integer",
+            "title": "The Id Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 0,
+            "examples": [
+              2.0
+            ]
+          },
+          "value": {
+            "$id": "#/items/properties/subjectsAreFollowedType/properties/value",
+            "type": "string",
+            "title": "The Value Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+              "Fixed Period"
+            ]
+          }
+        }
+      },
+      "subjectsAreFollowedPeriod": {
+        "$id": "#/items/properties/subjectsAreFollowedPeriod",
+        "type": "integer",
+        "title": "The Subjectsarefollowedperiod Schema",
+        "description": "An explanation about the purpose of this instance.",
+        "default": 0,
+        "examples": [
+          3.0
+        ]
+      },
+      "type1Error": {
+        "$id": "#/items/properties/type1Error",
+        "type": "string",
+        "title": "The Type1error Schema",
+        "description": "An explanation about the purpose of this instance.",
+        "default": "",
+        "examples": [
+          "0.5"
+        ]
+      },
+      "testStatistics": {
+        "$id": "#/items/properties/testStatistics",
+        "type": "object",
+        "title": "The Teststatistics Schema",
+        "description": "An explanation about the purpose of this instance.",
+        "default": {},
+        "examples": [
+          {
+            "value": "Logrank",
+            "id": 1.0
+          }
+        ],
+        "additionalProperties": true,
+        "required": [
+          "id",
+          "value"
+        ],
+        "properties": {
+          "id": {
+            "$id": "#/items/properties/testStatistics/properties/id",
+            "type": "integer",
+            "title": "The Id Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 0,
+            "examples": [
+              1.0
+            ]
+          },
+          "value": {
+            "$id": "#/items/properties/testStatistics/properties/value",
+            "type": "string",
+            "title": "The Value Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+              "Logrank"
+            ]
+          }
+        }
+      },
+      "testType": {
+        "$id": "#/items/properties/testType",
+        "type": "object",
+        "title": "The Testtype Schema",
+        "description": "An explanation about the purpose of this instance.",
+        "default": {},
+        "examples": [
+          {
+            "value": "1-Sided",
+            "id": 1.0
+          }
+        ],
+        "additionalProperties": true,
+        "required": [
+          "id",
+          "value"
+        ],
+        "properties": {
+          "id": {
+            "$id": "#/items/properties/testType/properties/id",
+            "type": "integer",
+            "title": "The Id Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 0,
+            "examples": [
+              1.0
+            ]
+          },
+          "value": {
+            "$id": "#/items/properties/testType/properties/value",
+            "type": "string",
+            "title": "The Value Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+              "1-Sided"
+            ]
+          }
+        }
+      },
+      "tailType": {
+        "$id": "#/items/properties/tailType",
+        "type": "object",
+        "title": "The Tailtype Schema",
+        "description": "An explanation about the purpose of this instance.",
+        "default": {},
+        "examples": [
+          {
+            "id": 1.0,
+            "value": "Left Tail"
+          }
+        ],
+        "additionalProperties": true,
+        "required": [
+          "id",
+          "value"
+        ],
+        "properties": {
+          "id": {
+            "$id": "#/items/properties/tailType/properties/id",
+            "type": "integer",
+            "title": "The Id Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 0,
+            "examples": [
+              1.0
+            ]
+          },
+          "value": {
+            "$id": "#/items/properties/tailType/properties/value",
+            "type": "string",
+            "title": "The Value Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+              "Left Tail"
+            ]
+          }
+        }
+      },
+      "criticalPoint": {
+        "$id": "#/items/properties/criticalPoint",
+        "type": "number",
+        "title": "The Criticalpoint Schema",
+        "description": "An explanation about the purpose of this instance.",
+        "default": 0,
+        "examples": [
+          -1.96
+        ]
+      },
+      "error": {
+        "$id": "#/items/properties/error",
+        "type": "array",
+        "title": "The Error Schema",
+        "description": "An explanation about the purpose of this instance.",
+        "default": [],
+        "examples": [
+          [
+            {
+              "field": "Name",
+              "message": "Error Message"
+            }
+          ]
+        ],
+        "additionalItems": true,
+        "items": {
+          "$id": "#/items/properties/error/items",
+          "type": "object",
+          "title": "The Items Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": {},
+          "examples": [
+            {
+              "field": "Name",
+              "message": "Error Message"
+            }
+          ],
+          "additionalProperties": true,
+          "required": [
+            "field",
+            "message"
+          ],
+          "properties": {
+            "field": {
+              "$id": "#/items/properties/error/items/properties/field",
+              "type": "string",
+              "title": "The Field Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "Name"
+              ]
+            },
+            "message": {
+              "$id": "#/items/properties/error/items/properties/message",
+              "type": "string",
+              "title": "The Message Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "Error Message"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

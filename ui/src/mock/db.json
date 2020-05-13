@@ -1,0 +1,40 @@
+{
+  "projects": [
+    {
+      "ID": 1,
+      "Name": "Program 1",
+      "ProtocolID": "P1",
+      "Program": "P",
+      "Indication": "",
+      "Phase": "Phase 1",
+      "Status": "In Progess",
+      "TimeUnit": "Month",
+      "Currency": "USD",
+      "DiscountRate": ""
+    },
+    {
+      "ID": 2,
+      "Name": "Program 2",
+      "ProtocolID": "P2",
+      "Program": "P",
+      "Indication": "",
+      "Phase": "Phase 2",
+      "Status": "In Progess",
+      "TimeUnit": "Month",
+      "Currency": "USD",
+      "DiscountRate": ""
+    },
+    {
+      "ID": 3,
+      "Name": "Program 3",
+      "ProtocolID": "P3",
+      "Program": "P",
+      "Indication": "",
+      "Phase": "Phase 1",
+      "Status": "Complete",
+      "TimeUnit": "Year",
+      "Currency": "USD",
+      "DiscountRate": ""
+    }
+  ]
+}

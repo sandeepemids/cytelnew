@@ -1,0 +1,18 @@
+{
+    "type1Error": {
+        "ui:placeholder": "Type 1 Error",
+        "ui:autocomplete": "off"
+    },
+    "testStatistics": {
+        "ui:placeholder": "Test Statistics",
+        "ui:readonly": true
+    },
+    "testType": {
+        "ui:placeholder": "Test Type",
+        "ui:readonly": true
+    },
+    "criticalPoint": {
+        "ui:placeholder": "Critical Point",
+        "ui:readonly": true
+    }
+}

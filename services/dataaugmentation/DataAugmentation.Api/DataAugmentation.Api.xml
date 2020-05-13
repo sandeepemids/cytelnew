@@ -1,0 +1,100 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DataAugmentation.Api</name>
+    </assembly>
+    <members>
+        <member name="M:DataAugmentation.Api.Controllers.DataAugmentationController.#ctor(DataAugmentation.Service.Interface.IDataAugmentationService)">
+            <summary>
+            StorageController Constructor Definition
+            </summary>
+            <param name="storageService"></param>
+        </member>
+        <member name="M:DataAugmentation.Api.Controllers.DataAugmentationController.Storage">
+            <summary>
+            POST endpoint for Simulating the Solaris Design
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DataAugmentation.Api.Controllers.DataAugmentationController.GetModelCount">
+            <summary>
+            Get endpoint for getting the Models count
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:DataAugmentation.Api.Extensions.ExceptionMiddleware">
+            <summary>
+            Middleware definition for Global Exception Handler
+            </summary>
+        </member>
+        <member name="M:DataAugmentation.Api.Extensions.ExceptionMiddleware.ConfigureExceptionHandler(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+            <summary>
+            Configures Exception Handler
+            </summary>
+            <param name="app">Application Builder Object</param>
+        </member>
+        <member name="T:DataAugmentation.Api.Extensions.ServiceExtensions">
+            <summary>
+            Extension class defined for Service Class
+            </summary>
+        </member>
+        <member name="M:DataAugmentation.Api.Extensions.ServiceExtensions.ConfigureCors(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Configures CORS Policy
+            </summary>
+            <param name="services">Services Object</param>
+        </member>
+        <member name="M:DataAugmentation.Api.Extensions.ServiceExtensions.ConfigureApiVersioning(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Configures API Versioning
+            </summary>
+            <param name="services">Services Object</param>
+        </member>
+        <member name="T:DataAugmentation.Api.Extensions.SwaggerExtension">
+            <summary>
+            Extension class defined for Swagger Class
+            </summary>
+        </member>
+        <member name="M:DataAugmentation.Api.Extensions.SwaggerExtension.AddSwagger(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Adds Swagger support Storage API service
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="M:DataAugmentation.Api.Extensions.SwaggerExtension.UseCustomSwagger(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+            <summary>
+            Uses Custom Swagger
+            </summary>
+            <param name="app"></param>
+        </member>
+        <member name="T:DataAugmentation.Api.Startup">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:DataAugmentation.Api.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            
+            </summary>
+            <param name="configuration"></param>
+        </member>
+        <member name="P:DataAugmentation.Api.Startup.Configuration">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:DataAugmentation.Api.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            This method gets called by the runtime. Use this method to add services to the container.
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="M:DataAugmentation.Api.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)">
+            <summary>
+            This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+            </summary>
+            <param name="app"></param>
+            <param name="env"></param>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,985 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "title": "The Root Schema",
+    "description": "The root schema comprises the entire JSON document.",
+    "required": [
+        "msgVersion",
+        "msgType",
+        "msgId",
+        "target",
+        "computeInfo",
+        "project",
+        "population",
+        "enrollment",
+        "design"
+    ],
+    "properties": {
+        "msgVersion": {
+            "$id": "#/properties/msgVersion",
+            "type": "number",
+            "title": "The Msgversion Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 0,
+            "examples": [
+                1
+            ]
+        },
+        "msgType": {
+            "$id": "#/properties/msgType",
+            "type": "string",
+            "title": "The Msgtype Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "computeSimulation"
+            ]
+        },
+        "msgId": {
+            "$id": "#/properties/msgId",
+            "type": "integer",
+            "title": "The Msgid Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 0,
+            "examples": [
+                123456789
+            ]
+        },
+        "target": {
+            "$id": "#/properties/target",
+            "type": "object",
+            "title": "The Target Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": {},
+            "examples": [
+                {
+                    "location": "//regstry.docker.com/cytel/",
+                    "id": 123.0,
+                    "version": 1.0,
+                    "name": "2-arm-TimeToEvent-GroupSequential"
+                }
+            ],
+            "required": [
+                "location",
+                "name",
+                "id",
+                "version"
+            ],
+            "properties": {
+                "location": {
+                    "$id": "#/properties/target/properties/location",
+                    "type": "string",
+                    "title": "The Location Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "//regstry.docker.com/cytel/"
+                    ]
+                },
+                "name": {
+                    "$id": "#/properties/target/properties/name",
+                    "type": "string",
+                    "title": "The Name Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "2-arm-TimeToEvent-GroupSequential"
+                    ]
+                },
+                "id": {
+                    "$id": "#/properties/target/properties/id",
+                    "type": "integer",
+                    "title": "The Id Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": 0,
+                    "examples": [
+                        123
+                    ]
+                },
+                "version": {
+                    "$id": "#/properties/target/properties/version",
+                    "type": "number",
+                    "title": "The Version Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": 0,
+                    "examples": [
+                        1
+                    ]
+                }
+            }
+        },
+        "computeInfo": {
+            "$id": "#/properties/computeInfo",
+            "type": "array",
+            "title": "The Computeinfo Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": [],
+            "items": {
+                "$id": "#/properties/computeInfo/items",
+                "type": "object",
+                "title": "The Items Schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": {},
+                "examples": [
+                    {
+                        "stage": "SimulationService",
+                        "sentTime": "20200402-12:23:33.348",
+                        "receviedTime": "20200402-12:23:31.342"
+                    },
+                    {
+                        "stage": "InputQueue",
+                        "sentTime": "20200402-12:23:33.348",
+                        "receviedTime": "20200402-12:23:31.342"
+                    }
+                ],
+                "required": [
+                    "stage",
+                    "receviedTime",
+                    "sentTime"
+                ],
+                "properties": {
+                    "stage": {
+                        "$id": "#/properties/computeInfo/items/properties/stage",
+                        "type": "string",
+                        "title": "The Stage Schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": "",
+                        "examples": [
+                            "SimulationService"
+                        ]
+                    },
+                    "receviedTime": {
+                        "$id": "#/properties/computeInfo/items/properties/receviedTime",
+                        "type": "string",
+                        "title": "The Receviedtime Schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": "",
+                        "examples": [
+                            "20200402-12:23:31.342"
+                        ]
+                    },
+                    "sentTime": {
+                        "$id": "#/properties/computeInfo/items/properties/sentTime",
+                        "type": "string",
+                        "title": "The Senttime Schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": "",
+                        "examples": [
+                            "20200402-12:23:33.348"
+                        ]
+                    }
+                }
+            }
+        },
+        "project": {
+            "$id": "#/properties/project",
+            "type": "object",
+            "title": "The Project Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": {},
+            "examples": [
+                {
+                    "timeUnit": "Month",
+                    "controlArm": "Salvage Chemo",
+                    "projectName": "Project Name",
+                    "treatmentArm": "Quizartinib",
+                    "scenarioId": "bd57e927227311eaa3270b9e81dab55e",
+                    "simSeed": 1234567.0,
+                    "numberOfSim": 10000.0
+                }
+            ],
+            "required": [
+                "scenarioId",
+                "projectName",
+                "timeUnit",
+                "controlArm",
+                "treatmentArm",
+                "numberOfSim",
+                "simSeed"
+            ],
+            "properties": {
+                "scenarioId": {
+                    "$id": "#/properties/project/properties/scenarioId",
+                    "type": "string",
+                    "title": "The Scenarioid Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "bd57e927227311eaa3270b9e81dab55e"
+                    ]
+                },
+                "projectName": {
+                    "$id": "#/properties/project/properties/projectName",
+                    "type": "string",
+                    "title": "The Projectname Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "Project Name"
+                    ]
+                },
+                "timeUnit": {
+                    "$id": "#/properties/project/properties/timeUnit",
+                    "type": "string",
+                    "title": "The Timeunit Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "Month"
+                    ]
+                },
+                "controlArm": {
+                    "$id": "#/properties/project/properties/controlArm",
+                    "type": "string",
+                    "title": "The Controlarm Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "Salvage Chemo"
+                    ]
+                },
+                "treatmentArm": {
+                    "$id": "#/properties/project/properties/treatmentArm",
+                    "type": "string",
+                    "title": "The Treatmentarm Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "Quizartinib"
+                    ]
+                },
+                "numberOfSim": {
+                    "$id": "#/properties/project/properties/numberOfSim",
+                    "type": "integer",
+                    "title": "The Numberofsim Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": 0,
+                    "examples": [
+                        10000
+                    ]
+                },
+                "simSeed": {
+                    "$id": "#/properties/project/properties/simSeed",
+                    "type": "integer",
+                    "title": "The Simseed Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": 0,
+                    "examples": [
+                        1234567
+                    ]
+                }
+            }
+        },
+        "population": {
+            "$id": "#/properties/population",
+            "type": "object",
+            "title": "The Population Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": {},
+            "examples": [
+                {
+                    "name": "Population Name",
+                    "virtualPopulationSize": 10000.0,
+                    "endpointModel": [
+                        {
+                            "name": "Overall Survival",
+                            "type": "Time to Event",
+                            "inputMethod": "Median Survival Time",
+                            "inputData": [
+                                {
+                                    "treatment": 0.017,
+                                    "control": 0.035,
+                                    "hazardRatio": 0.486
+                                }
+                            ],
+                            "modelName": "Exponential",
+                            "endpoint": "Overall Survival"
+                        },
+                        {
+                            "name": "Progress Free Survival",
+                            "type": "Time to Event",
+                            "inputMethod": "Median Survival Time",
+                            "inputData": [
+                                {
+                                    "treatment": 0.017,
+                                    "control": 0.035,
+                                    "hazardRatio": 0.486
+                                }
+                            ],
+                            "modelName": "Exponential",
+                            "endpoint": "Progress Free Survival"
+                        }
+                    ],
+                    "populationId": "bd57e92722731we1ea3270b9e81dab55e",
+                    "dropoutRateModel": {
+                        "inputMethod": "Probability of Dropout",
+                        "modelName": "Exponential",
+                        "inputData": [
+                            {
+                                "treatment": 0.017,
+                                "byTime": 10.0,
+                                "control": 0.035
+                            }
+                        ]
+                    }
+                }
+            ],
+            "required": [
+                "populationId",
+                "name",
+                "virtualPopulationSize",
+                "endpointModel",
+                "dropoutRateModel"
+            ],
+            "properties": {
+                "populationId": {
+                    "$id": "#/properties/population/properties/populationId",
+                    "type": "string",
+                    "title": "The Populationid Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "bd57e92722731we1ea3270b9e81dab55e"
+                    ]
+                },
+                "name": {
+                    "$id": "#/properties/population/properties/name",
+                    "type": "string",
+                    "title": "The Name Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "Population Name"
+                    ]
+                },
+                "virtualPopulationSize": {
+                    "$id": "#/properties/population/properties/virtualPopulationSize",
+                    "type": "integer",
+                    "title": "The Virtualpopulationsize Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": 0,
+                    "examples": [
+                        10000
+                    ]
+                },
+                "endpointModel": {
+                    "$id": "#/properties/population/properties/endpointModel",
+                    "type": "array",
+                    "title": "The Endpointmodel Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": [],
+                    "items": {
+                        "$id": "#/properties/population/properties/endpointModel/items",
+                        "type": "object",
+                        "title": "The Items Schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": {},
+                        "examples": [
+                            {
+                                "inputMethod": "Median Survival Time",
+                                "inputData": [
+                                    {
+                                        "control": 0.035,
+                                        "hazardRatio": 0.486,
+                                        "treatment": 0.017
+                                    }
+                                ],
+                                "modelName": "Exponential",
+                                "endpoint": "Overall Survival",
+                                "name": "Overall Survival",
+                                "type": "Time to Event"
+                            },
+                            {
+                                "inputMethod": "Median Survival Time",
+                                "modelName": "Exponential",
+                                "inputData": [
+                                    {
+                                        "control": 0.035,
+                                        "hazardRatio": 0.486,
+                                        "treatment": 0.017
+                                    }
+                                ],
+                                "endpoint": "Progress Free Survival",
+                                "name": "Progress Free Survival",
+                                "type": "Time to Event"
+                            }
+                        ],
+                        "required": [
+                            "name",
+                            "endpoint",
+                            "type",
+                            "modelName",
+                            "inputMethod",
+                            "inputData"
+                        ],
+                        "properties": {
+                            "name": {
+                                "$id": "#/properties/population/properties/endpointModel/items/properties/name",
+                                "type": "string",
+                                "title": "The Name Schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    "Overall Survival"
+                                ]
+                            },
+                            "endpoint": {
+                                "$id": "#/properties/population/properties/endpointModel/items/properties/endpoint",
+                                "type": "string",
+                                "title": "The Endpoint Schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    "Overall Survival"
+                                ]
+                            },
+                            "type": {
+                                "$id": "#/properties/population/properties/endpointModel/items/properties/type",
+                                "type": "string",
+                                "title": "The Type Schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    "Time to Event"
+                                ]
+                            },
+                            "modelName": {
+                                "$id": "#/properties/population/properties/endpointModel/items/properties/modelName",
+                                "type": "string",
+                                "title": "The Modelname Schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    "Exponential"
+                                ]
+                            },
+                            "inputMethod": {
+                                "$id": "#/properties/population/properties/endpointModel/items/properties/inputMethod",
+                                "type": "string",
+                                "title": "The Inputmethod Schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    "Median Survival Time"
+                                ]
+                            },
+                            "inputData": {
+                                "$id": "#/properties/population/properties/endpointModel/items/properties/inputData",
+                                "type": "array",
+                                "title": "The Inputdata Schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": [],
+                                "items": {
+                                    "$id": "#/properties/population/properties/endpointModel/items/properties/inputData/items",
+                                    "type": "object",
+                                    "title": "The Items Schema",
+                                    "description": "An explanation about the purpose of this instance.",
+                                    "default": {},
+                                    "examples": [
+                                        {
+                                            "control": 0.035,
+                                            "hazardRatio": 0.486,
+                                            "treatment": 0.017
+                                        }
+                                    ],
+                                    "required": [
+                                        "control",
+                                        "treatment",
+                                        "hazardRatio"
+                                    ],
+                                    "properties": {
+                                        "control": {
+                                            "$id": "#/properties/population/properties/endpointModel/items/properties/inputData/items/properties/control",
+                                            "type": "number",
+                                            "title": "The Control Schema",
+                                            "description": "An explanation about the purpose of this instance.",
+                                            "default": 0,
+                                            "examples": [
+                                                0.035
+                                            ]
+                                        },
+                                        "treatment": {
+                                            "$id": "#/properties/population/properties/endpointModel/items/properties/inputData/items/properties/treatment",
+                                            "type": "number",
+                                            "title": "The Treatment Schema",
+                                            "description": "An explanation about the purpose of this instance.",
+                                            "default": 0,
+                                            "examples": [
+                                                0.017
+                                            ]
+                                        },
+                                        "hazardRatio": {
+                                            "$id": "#/properties/population/properties/endpointModel/items/properties/inputData/items/properties/hazardRatio",
+                                            "type": "number",
+                                            "title": "The Hazardratio Schema",
+                                            "description": "An explanation about the purpose of this instance.",
+                                            "default": 0,
+                                            "examples": [
+                                                0.486
+                                            ]
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "dropoutRateModel": {
+                    "$id": "#/properties/population/properties/dropoutRateModel",
+                    "type": "object",
+                    "title": "The Dropoutratemodel Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": {},
+                    "examples": [
+                        {
+                            "inputMethod": "Probability of Dropout",
+                            "modelName": "Exponential",
+                            "inputData": [
+                                {
+                                    "treatment": 0.017,
+                                    "byTime": 10.0,
+                                    "control": 0.035
+                                }
+                            ]
+                        }
+                    ],
+                    "required": [
+                        "modelName",
+                        "inputMethod",
+                        "inputData"
+                    ],
+                    "properties": {
+                        "modelName": {
+                            "$id": "#/properties/population/properties/dropoutRateModel/properties/modelName",
+                            "type": "string",
+                            "title": "The Modelname Schema",
+                            "description": "An explanation about the purpose of this instance.",
+                            "default": "",
+                            "examples": [
+                                "Exponential"
+                            ]
+                        },
+                        "inputMethod": {
+                            "$id": "#/properties/population/properties/dropoutRateModel/properties/inputMethod",
+                            "type": "string",
+                            "title": "The Inputmethod Schema",
+                            "description": "An explanation about the purpose of this instance.",
+                            "default": "",
+                            "examples": [
+                                "Probability of Dropout"
+                            ]
+                        },
+                        "inputData": {
+                            "$id": "#/properties/population/properties/dropoutRateModel/properties/inputData",
+                            "type": "array",
+                            "title": "The Inputdata Schema",
+                            "description": "An explanation about the purpose of this instance.",
+                            "default": [],
+                            "items": {
+                                "$id": "#/properties/population/properties/dropoutRateModel/properties/inputData/items",
+                                "type": "object",
+                                "title": "The Items Schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": {},
+                                "examples": [
+                                    {
+                                        "control": 0.035,
+                                        "treatment": 0.017,
+                                        "byTime": 10.0
+                                    }
+                                ],
+                                "required": [
+                                    "byTime",
+                                    "control",
+                                    "treatment"
+                                ],
+                                "properties": {
+                                    "byTime": {
+                                        "$id": "#/properties/population/properties/dropoutRateModel/properties/inputData/items/properties/byTime",
+                                        "type": "integer",
+                                        "title": "The Bytime Schema",
+                                        "description": "An explanation about the purpose of this instance.",
+                                        "default": 0,
+                                        "examples": [
+                                            10
+                                        ]
+                                    },
+                                    "control": {
+                                        "$id": "#/properties/population/properties/dropoutRateModel/properties/inputData/items/properties/control",
+                                        "type": "number",
+                                        "title": "The Control Schema",
+                                        "description": "An explanation about the purpose of this instance.",
+                                        "default": 0,
+                                        "examples": [
+                                            0.035
+                                        ]
+                                    },
+                                    "treatment": {
+                                        "$id": "#/properties/population/properties/dropoutRateModel/properties/inputData/items/properties/treatment",
+                                        "type": "number",
+                                        "title": "The Treatment Schema",
+                                        "description": "An explanation about the purpose of this instance.",
+                                        "default": 0,
+                                        "examples": [
+                                            0.017
+                                        ]
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "enrollment": {
+            "$id": "#/properties/enrollment",
+            "type": "object",
+            "title": "The Enrollment Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": {},
+            "examples": [
+                {
+                    "distribution ": "Uniform",
+                    "sites": [
+                        {
+                            "siteInititationTime": 0.0,
+                            "enrollmentCap": 33.33,
+                            "geography": "USA",
+                            "avgPatientsEnrolled": 20.0
+                        }
+                    ],
+                    "enrollmentId": "fg57e92722731we1ea4570b9e81dab55e",
+                    "name": "Enrollment Name 1",
+                    "inputMethod": "Accrual Rate"
+                }
+            ],
+            "required": [
+                "enrollmentId",
+                "name",
+                "inputMethod",
+                "distribution ",
+                "sites"
+            ],
+            "properties": {
+                "enrollmentId": {
+                    "$id": "#/properties/enrollment/properties/enrollmentId",
+                    "type": "string",
+                    "title": "The Enrollmentid Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "fg57e92722731we1ea4570b9e81dab55e"
+                    ]
+                },
+                "name": {
+                    "$id": "#/properties/enrollment/properties/name",
+                    "type": "string",
+                    "title": "The Name Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "Enrollment Name 1"
+                    ]
+                },
+                "inputMethod": {
+                    "$id": "#/properties/enrollment/properties/inputMethod",
+                    "type": "string",
+                    "title": "The Inputmethod Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "Accrual Rate"
+                    ]
+                },
+                "distribution ": {
+                    "$id": "#/properties/enrollment/properties/distribution ",
+                    "type": "string",
+                    "title": "The Distribution  Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "Uniform"
+                    ]
+                },
+                "sites": {
+                    "$id": "#/properties/enrollment/properties/sites",
+                    "type": "array",
+                    "title": "The Sites Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": [],
+                    "items": {
+                        "$id": "#/properties/enrollment/properties/sites/items",
+                        "type": "object",
+                        "title": "The Items Schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": {},
+                        "examples": [
+                            {
+                                "siteInititationTime": 0.0,
+                                "enrollmentCap": 33.33,
+                                "geography": "USA",
+                                "avgPatientsEnrolled": 20.0
+                            }
+                        ],
+                        "required": [
+                            "geography",
+                            "siteInititationTime",
+                            "avgPatientsEnrolled",
+                            "enrollmentCap"
+                        ],
+                        "properties": {
+                            "geography": {
+                                "$id": "#/properties/enrollment/properties/sites/items/properties/geography",
+                                "type": "string",
+                                "title": "The Geography Schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    "USA"
+                                ]
+                            },
+                            "siteInititationTime": {
+                                "$id": "#/properties/enrollment/properties/sites/items/properties/siteInititationTime",
+                                "type": "integer",
+                                "title": "The Siteinititationtime Schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": 0,
+                                "examples": [
+                                    0
+                                ]
+                            },
+                            "avgPatientsEnrolled": {
+                                "$id": "#/properties/enrollment/properties/sites/items/properties/avgPatientsEnrolled",
+                                "type": "integer",
+                                "title": "The Avgpatientsenrolled Schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": 0,
+                                "examples": [
+                                    20
+                                ]
+                            },
+                            "enrollmentCap": {
+                                "$id": "#/properties/enrollment/properties/sites/items/properties/enrollmentCap",
+                                "type": "number",
+                                "title": "The Enrollmentcap Schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": 0,
+                                "examples": [
+                                    33.33
+                                ]
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "design": {
+            "$id": "#/properties/design",
+            "type": "object",
+            "title": "The Design Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": {},
+            "examples": [
+                {
+                    "allocationRatio": 3.5,
+                    "subjectsAreFollowedPeriod": 3.0,
+                    "regulatoryRiskAssessment": "Low",
+                    "subjectsAreFollowedType": "Fixed Period",
+                    "testStatistics": "Logrank",
+                    "hypothesis": "Superiority",
+                    "name": "Name of Design",
+                    "criticalPoint": -1.96,
+                    "sampleSize": 400.0,
+                    "primaryEndpoint": "Overall Survival",
+                    "type1Error": 0.5,
+                    "numberOfArms": 2.0,
+                    "testType": "1-Sided",
+                    "numberOfEvents": 120.0,
+                    "tailType": "Left Tail",
+                    "statisticalDesign": "Fixed Sample"
+                }
+            ],
+            "required": [
+                "name",
+                "primaryEndpoint",
+                "numberOfArms",
+                "regulatoryRiskAssessment",
+                "statisticalDesign",
+                "hypothesis",
+                "numberOfEvents",
+                "sampleSize",
+                "allocationRatio",
+                "subjectsAreFollowedType",
+                "subjectsAreFollowedPeriod",
+                "type1Error",
+                "testStatistics",
+                "testType",
+                "tailType",
+                "criticalPoint"
+            ],
+            "properties": {
+                "name": {
+                    "$id": "#/properties/design/properties/name",
+                    "type": "string",
+                    "title": "The Name Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "Name of Design"
+                    ]
+                },
+                "primaryEndpoint": {
+                    "$id": "#/properties/design/properties/primaryEndpoint",
+                    "type": "string",
+                    "title": "The Primaryendpoint Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "Overall Survival"
+                    ]
+                },
+                "numberOfArms": {
+                    "$id": "#/properties/design/properties/numberOfArms",
+                    "type": "integer",
+                    "title": "The Numberofarms Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": 0,
+                    "examples": [
+                        2
+                    ]
+                },
+                "regulatoryRiskAssessment": {
+                    "$id": "#/properties/design/properties/regulatoryRiskAssessment",
+                    "type": "string",
+                    "title": "The Regulatoryriskassessment Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "Low"
+                    ]
+                },
+                "statisticalDesign": {
+                    "$id": "#/properties/design/properties/statisticalDesign",
+                    "type": "string",
+                    "title": "The Statisticaldesign Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "Fixed Sample"
+                    ]
+                },
+                "hypothesis": {
+                    "$id": "#/properties/design/properties/hypothesis",
+                    "type": "string",
+                    "title": "The Hypothesis Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "Superiority"
+                    ]
+                },
+                "numberOfEvents": {
+                    "$id": "#/properties/design/properties/numberOfEvents",
+                    "type": "integer",
+                    "title": "The Numberofevents Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": 0,
+                    "examples": [
+                        120
+                    ]
+                },
+                "sampleSize": {
+                    "$id": "#/properties/design/properties/sampleSize",
+                    "type": "integer",
+                    "title": "The Samplesize Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": 0,
+                    "examples": [
+                        400
+                    ]
+                },
+                "allocationRatio": {
+                    "$id": "#/properties/design/properties/allocationRatio",
+                    "type": "number",
+                    "title": "The Allocationratio Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": 0,
+                    "examples": [
+                        3.5
+                    ]
+                },
+                "subjectsAreFollowedType": {
+                    "$id": "#/properties/design/properties/subjectsAreFollowedType",
+                    "type": "string",
+                    "title": "The Subjectsarefollowedtype Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "Fixed Period"
+                    ]
+                },
+                "subjectsAreFollowedPeriod": {
+                    "$id": "#/properties/design/properties/subjectsAreFollowedPeriod",
+                    "type": "integer",
+                    "title": "The Subjectsarefollowedperiod Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": 0,
+                    "examples": [
+                        3
+                    ]
+                },
+                "type1Error": {
+                    "$id": "#/properties/design/properties/type1Error",
+                    "type": "number",
+                    "title": "The Type1error Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": 0,
+                    "examples": [
+                        0.5
+                    ]
+                },
+                "testStatistics": {
+                    "$id": "#/properties/design/properties/testStatistics",
+                    "type": "string",
+                    "title": "The Teststatistics Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "Logrank"
+                    ]
+                },
+                "testType": {
+                    "$id": "#/properties/design/properties/testType",
+                    "type": "string",
+                    "title": "The Testtype Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "1-Sided"
+                    ]
+                },
+                "tailType": {
+                    "$id": "#/properties/design/properties/tailType",
+                    "type": "string",
+                    "title": "The Tailtype Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "Left Tail"
+                    ]
+                },
+                "criticalPoint": {
+                    "$id": "#/properties/design/properties/criticalPoint",
+                    "type": "number",
+                    "title": "The Criticalpoint Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": 0,
+                    "examples": [
+                        -1.96
+                    ]
+                }
+            }
+        }
+    }
+}

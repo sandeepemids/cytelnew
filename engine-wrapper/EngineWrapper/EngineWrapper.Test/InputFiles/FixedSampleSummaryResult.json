@@ -1,0 +1,18 @@
+{
+  "summaryResult": {
+    "FollowUpTime": 10.063735691823018,
+    "accrualDuration": 37.41904758856981,
+    "dropouts": 30.172,
+    "events": 150,
+    "insuffInfoCount": 0,
+    "outputBoundaries": {
+      "effBoundary": [
+        -1.959963985736467
+      ]
+    },
+    "power": 0.988,
+    "sampleSize": 300.879,
+    "simSeed": 1,
+    "studyDuration": 37.5401796736003
+  }
+}

@@ -1,0 +1,10 @@
+{
+    "sampleSize": {
+        "ui:placeholder": "Sample Size",
+        "ui:autocomplete": "off"
+      },
+      "allocationRatio": {
+        "ui:placeholder": "Allocation Ratio",
+        "ui:autocomplete": "off"
+      }
+}

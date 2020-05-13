@@ -1,0 +1,48 @@
+{
+    "type":"object",
+    "properties": {
+        "subjectsAreFollowed": {
+            "type": "integer",
+            "title": "Subjects are Followed",
+            "enum": [
+                1,
+                2
+            ],
+            "enumNames": [
+                "Until End of Study",
+                "For Fixed Period"
+            ]
+        },
+        "type1Error": {
+            "type": "string",
+            "title": "Type 1 Error",
+            "default": "0.025"
+        },
+        "testStatistics": {
+            "title": "Test Statistics",
+            "type": "string",
+            "default": "Logrank"
+        },
+        "testType": {
+            "title": "Test Type",
+            "type": "string",
+            "default": "1-sided"
+        },
+        "tailType": {
+            "title": "Tail Type",
+            "type": "integer",
+            "enum": [
+                1,
+                2
+            ],
+            "enumNames": [
+                "Left Tail",
+                "Right Tail"
+            ]
+        },
+        "criticalPoint": {
+            "title": "Critical Point",
+            "type": "string"
+        }
+    }
+}

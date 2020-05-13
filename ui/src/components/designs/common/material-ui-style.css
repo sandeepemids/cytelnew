@@ -1,0 +1,47 @@
+form legend {
+    margin-bottom: 16px;
+    }
+    
+    form label {
+    background: white;
+    margin: 0 12px;
+    padding: 0 4px;
+    position: absolute;
+    top: -8px;
+    line-height: 16px;
+    font-size: 12px;
+    color: #a1a1a1;
+    transition: .15s ease-in-out;
+    pointer-events: none;
+    }
+    
+    form .form-control {
+    border-color: #c7c7c7;
+    height: 40px;
+    font-size: 14px;
+    color: #1a1a1a;
+    padding: 0 16px;
+    }
+    
+    form .form-control::placeholder {
+    color: #a1a1a1;
+    }
+    
+    form .form-control:hover {
+    border-color: #656565;
+    }
+    
+    form .form-control:focus {
+    box-shadow: none;
+    border: 1px solid #00529C;
+    color: #1a1a1a;
+    }
+    
+    form .form-control:focus ~ label {
+    color: #00529C;
+    }
+    
+    form .form-group {
+    margin-bottom: 27px;
+    margin-top: 8px;
+    }

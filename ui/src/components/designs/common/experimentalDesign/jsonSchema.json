@@ -1,0 +1,15 @@
+{
+    "type": "object",
+    "properties": {
+        "sampleSize": {
+            "type": "string",
+            "title": "Sample Size",
+            "default": "182"
+          },
+          "allocationRatio": {
+            "type": "string",
+            "title": "Allocation Ratio",
+            "default": "1"
+          }
+    }
+}

@@ -1,0 +1,7 @@
+{   
+	"objective.objective": "Objective", 
+	"objective.targetPopulation": "Population cible",
+	"objective.treatmentArm": "Bras de traitement",
+	"objective.controlArm": "Bras de commande",
+	"objective.addEndpoint": "+ Ajouter un point de terminaison"	
+}

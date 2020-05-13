@@ -1,0 +1,9 @@
+{
+  "ComputQueueName": "cydev-q-eng-001",
+  "OutputQueueName": "cydev-q-res-001",
+  "StorageAccountName": "cydevdatagen2",
+  "StorageAccountKey": "1jnIDcief2mTFN4aXdgWxgvB/+ygbMLJ8FqBEic4FaL2YgrtPAE023a0Jkcq9sng3b6P4/95Zy17LYAXKOiF3w==",
+  "DataLakeUri": "https://cydevdatagen2.dfs.core.windows.net/",
+  "DataLakeDirectoryName": "test-file-upload",
+  "IntervalTime": "100"
+}

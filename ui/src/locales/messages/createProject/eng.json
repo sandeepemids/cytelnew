@@ -1,0 +1,17 @@
+{	
+	"createProject.newProject": "New Project",
+	"createProject.studyDetail": "STUDY DETAIL",
+	"createProject.projectName": "Project Name",
+	"createProject.protocolID": "Protocol ID",
+	"createProject.indication": "Indication",
+	"createProject.program": "Program",
+	"createProject.phase": "Phase",
+	"createProject.projectSetup": "PROJECT SETUP",
+	"createProject.timeUnit": "Time Unit",
+	"createProject.currency": "Currency",
+	"createProject.save": "SAVE",
+	"createProject.cancel": "CANCEL",
+	"createProject.cancelMessage": "Do you really want to cancel it?",
+	"createProject.yes": "YES",
+	"createProject.no": "NO"	
+}

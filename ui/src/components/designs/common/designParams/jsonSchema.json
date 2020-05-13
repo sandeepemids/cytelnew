@@ -1,0 +1,32 @@
+{
+	"type": "object",
+	"properties": {
+		"name": {
+			"type": "string",
+			"title": "Name",
+			"maxLength": 75
+		},
+		"primaryEndpoint": {
+			"type": "string",
+			"title": "Primary Endpoint",
+			"enum": ["1"],
+			"enumNames": ["end Point1"]
+		},
+		"arms": {
+			"type": "string",
+			"title": "Arms",
+			"default": "2-arms"
+		},
+		"statisticalDesign": {
+			"type": "integer",
+			"title": "Statistical Design",
+			"enum": [1],
+			"enumNames": ["Fixed Sample"]
+		}
+	},
+	"required": [
+		"name",
+		"primaryEndpoint",
+		"statisticalDesign"
+	]
+}

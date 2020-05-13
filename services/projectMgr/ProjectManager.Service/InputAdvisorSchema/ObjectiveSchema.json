@@ -1,0 +1,266 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "title": "The Root Schema",
+  "description": "The root schema comprises the entire JSON document.",
+  "default": {},
+  "additionalProperties": true,
+  "required": [
+    "populationName",
+    "treatmentArm",
+    "controlArm",
+    "endpoint"
+  ],
+  "properties": {
+    "populationName": {
+      "$id": "#/properties/populationName",
+      "type": "string",
+      "title": "The Populationname Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "Name of the population"
+      ]
+    },
+    "treatmentArm": {
+      "$id": "#/properties/treatmentArm",
+      "type": "string",
+      "title": "The Treatmentarm Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "TArm"
+      ]
+    },
+    "controlArm": {
+      "$id": "#/properties/controlArm",
+      "type": "string",
+      "title": "The Controlarm Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "CArm"
+      ]
+    },
+    "endpoint": {
+      "$id": "#/properties/endpoint",
+      "type": "array",
+      "title": "The Endpoint Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": [],
+      "examples": [
+        [
+          {
+            "Type": "Time to event",
+            "error": [
+              {
+                "field": "Name",
+                "message": "Error Message"
+              }
+            ],
+            "cardOrder": 1.0,
+            "Endpoint": "Overall Survival",
+            "id": 1.0,
+            "Name": "Name 1"
+          }
+        ]
+      ],
+      "additionalItems": true,
+      "items": {
+        "$id": "#/properties/endpoint/items",
+        "type": "object",
+        "title": "The Items Schema",
+        "description": "An explanation about the purpose of this instance.",
+        "default": {},
+        "examples": [
+          {
+            "cardOrder": 1.0,
+            "error": [
+              {
+                "field": "Name",
+                "message": "Error Message"
+              }
+            ],
+            "Endpoint": "Overall Survival",
+            "id": 1.0,
+            "Name": "Name 1",
+            "Type": "Time to event"
+          }
+        ],
+        "additionalProperties": true,
+        "required": [
+          "id",
+          "Name",
+          "Endpoint",
+          "Type",
+          "cardOrder"
+        ],
+        "properties": {
+          "id": {
+            "$id": "#/properties/endpoint/items/properties/id",
+            "type": "integer",
+            "title": "The Id Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 0,
+            "examples": [
+              1.0
+            ]
+          },
+          "Name": {
+            "$id": "#/properties/endpoint/items/properties/Name",
+            "type": "string",
+            "title": "The Name Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+              "Name 1"
+            ]
+          },
+          "Endpoint": {
+            "$id": "#/properties/endpoint/items/properties/Endpoint",
+            "type": "string",
+            "title": "The Endpoint Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+              "Overall Survival"
+            ]
+          },
+          "Type": {
+            "$id": "#/properties/endpoint/items/properties/Type",
+            "type": "string",
+            "title": "The Type Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+              "Time to event"
+            ]
+          },
+          "cardOrder": {
+            "$id": "#/properties/endpoint/items/properties/cardOrder",
+            "type": "integer",
+            "title": "The Cardorder Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 0,
+            "examples": [
+              1.0
+            ]
+          },
+          "error": {
+            "$id": "#/properties/endpoint/items/properties/error",
+            "type": "array",
+            "title": "The Error Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": [],
+            "examples": [
+              [
+                {
+                  "field": "Name",
+                  "message": "Error Message"
+                }
+              ]
+            ],
+            "additionalItems": true,
+            "items": {
+              "$id": "#/properties/endpoint/items/properties/error/items",
+              "type": "object",
+              "title": "The Items Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": {},
+              "examples": [
+                {
+                  "field": "Name",
+                  "message": "Error Message"
+                }
+              ],
+              "additionalProperties": true,
+              "required": [
+                "field",
+                "message"
+              ],
+              "properties": {
+                "field": {
+                  "$id": "#/properties/endpoint/items/properties/error/items/properties/field",
+                  "type": "string",
+                  "title": "The Field Schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": [
+                    "Name"
+                  ]
+                },
+                "message": {
+                  "$id": "#/properties/endpoint/items/properties/error/items/properties/message",
+                  "type": "string",
+                  "title": "The Message Schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": [
+                    "Error Message"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "error": {
+      "$id": "#/properties/error",
+      "type": "array",
+      "title": "The Error Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": [],
+      "examples": [
+        [
+          {
+            "message": "Error Message",
+            "field": "Name"
+          }
+        ]
+      ],
+      "additionalItems": true,
+      "items": {
+        "$id": "#/properties/error/items",
+        "type": "object",
+        "title": "The Items Schema",
+        "description": "An explanation about the purpose of this instance.",
+        "default": {},
+        "examples": [
+          {
+            "field": "Name",
+            "message": "Error Message"
+          }
+        ],
+        "additionalProperties": true,
+        "required": [
+          "field",
+          "message"
+        ],
+        "properties": {
+          "field": {
+            "$id": "#/properties/error/items/properties/field",
+            "type": "string",
+            "title": "The Field Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+              "Name"
+            ]
+          },
+          "message": {
+            "$id": "#/properties/error/items/properties/message",
+            "type": "string",
+            "title": "The Message Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+              "Error Message"
+            ]
+          }
+        }
+      }
+    }
+  }
+}
