@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: madhavcytelnew 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: madhavcytelnew 
+    spec:
+      containers:
+        - name: madhavcytelnew 
+          image: testmadhav.azurecr.io/madhavcytelnew
+          ports:
+          - containerPort: 80
